@@ -10,6 +10,7 @@ class Sorting{
 public:
     void bubbleSort(std::vector<int>& nums);
     void selectionSort(std::vector<int>& nums);
+    void insertionSort(std::vector<int>& nums);
 
 private:
     void printVector(std::vector<int> nums);

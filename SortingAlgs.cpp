@@ -29,8 +29,22 @@ void Sorting::selectionSort(std::vector<int>& nums){
     printVector(nums);
 }
 
+// INSERTION SORT
+void Sorting::insertionSort(std::vector<int>& nums){
+    for(int i = 1; i < nums.size(); i++){
+        int key = nums[i];
+        int j = i - 1;
+        while(j >= 0 && key < nums[j]){
+            nums[j+1] = nums[j]; // shift elements smaller than j forward by 1
+            j -= 1;
+        }
+        nums[j+1] = key; // insert key
+    }
+    printVector(nums);
+}
 
 
+// OTHER
 void Sorting::printVector(std::vector<int> nums){
     for(int i = 0; i < nums.size(); i++){
         std::cout << nums[i] << " ";
